@@ -25,7 +25,7 @@ category_model_mapping = {
 
 # Sample lists for other fields
 leather_interior_options = ['Yes', 'No']
-fuel_type_options = ['CNG', 'Diesel', 'Hybrid', 'Hydrogen', 'LPG', 'Petrol', 'Plug-in-Hybrid']
+fuel_type_options = ['CNG', 'Diesel', 'Hybrid', 'Hydrogen', 'LPG', 'Petrol']
 colors = ['Beige', 'Black', 'Blue', 'Brown', 'Carnelian Red', 'Golden', 'Green', 'Grey', 'Orange', 'Purple', 'Red', 'Silver', 'Sky Blue', 'White', 'Yellow']
 
 
@@ -50,8 +50,8 @@ def predict_car_price(data):
                                              'Hatchback': 5, 'Microbus': 6, 'Goods wagon': 7, 'Pickup': 8})
     data['Wheel']=data['Wheel'].map({'Left Wheel': 0, 'Right Wheel': 1})
     data['Leather interior'] = data['Leather interior'].map({'No': 0, 'Yes': 1})
-    data['Fuel type'] = data['Fuel type'].map({'CNG': 0, 'Diesel': 1, 'Hybrid': 2, 'Hydrogen': 3, 'LPG': 4, 'Petrol': 5, 'Plug-in-Hybrid': 6})
-    data['Gear box type'] = data['Gear box type'].map({'Manual': 0, 'Automatic': 1})
+    data['Fuel type'] = data['Fuel type'].map({'CNG': 0, 'Diesel': 1, 'Hybrid': 2, 'Hydrogen': 3, 'LPG': 4, 'Petrol': 5})
+    data['Gear box type'] = data['Gear box type'].map({'Manual': 0, 'Automatic': 1,'Triptronic':2,'Variator':3})
     data['Drive wheels'] = data['Drive wheels'].map({'Front': 0, 'Rear': 1, '4*4': 2})
     data['Color']=data['Color'].map({'Beige': 0,'Black': 1,'Blue': 2,'Brown': 3,'Carnelian Red': 4,'Golden': 5,'Green': 6,'Grey': 7,'Orange': 8,'Purple': 9,'Red': 10,'Silver': 11,'Sky Blue': 12,'White': 13,'Yellow': 14})
 
@@ -114,13 +114,13 @@ def main():
         fuel_type = st.sidebar.selectbox('Fuel Type', fuel_type_options)
         engine_volume = st.sidebar.number_input('Engine Volume (L)', 0.0, 10.0, 1.8, step=0.1)
         mileage = st.sidebar.number_input('Mileage (Km)', 0, None, 50000, step=1000)
-        cylinders = st.sidebar.number_input('Number of Cylinders', 2, 12, 4)
-        gearbox_type = st.sidebar.selectbox('Gearbox Type', ('Manual', 'Automatic'))
+        cylinders = st.sidebar.number_input('Number of Cylinders', 2, 16, 4)
+        gearbox_type = st.sidebar.selectbox('Gearbox Type', ('Manual', 'Automatic','Triptronic','Variator'))
         drive_wheels = st.sidebar.selectbox('Drive Wheels', ('Front', 'Rear', '4*4'))
         doors = st.sidebar.number_input('Number of Doors', 2, 5, 4)
         wheel_type = st.sidebar.selectbox('Wheel Type', ('Left Wheel', 'Right Wheel'))
         color = st.sidebar.selectbox('Color',('Beige', 'Black', 'Blue', 'Brown', 'Carnelian Red', 'Golden', 'Green', 'Grey','Orange', 'Purple', 'Red', 'Silver', 'Sky Blue', 'White', 'Yellow'))
-        airbags = st.sidebar.number_input('Number of Airbags', 0, 10, 2)
+        airbags = st.sidebar.number_input('Number of Airbags', 0, 16, 2)
         
         
        
