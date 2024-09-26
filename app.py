@@ -71,33 +71,34 @@ def predict_car_price(data):
 # Streamlit App
 def main():
     st.header("Car Price Prediction App",divider='rainbow')
-    st.subheader("This app predicts the car price based on its specifications.")
+    st.subheader("This app predicts the vehicle price based on its specifications.")
     st.divider()
 
-    st.write("Below are features used to predict the car price:")
+    st.write("Below are features used to predict the vehicle price:")
     st.write("""<table>
             <tr><th>Features</th><th>Description</th></tr>
-            <tr><th>Manufacturer</th><td>The brand or manufacturer of the car</td></tr>
-            <tr><th>Model</th><td>The specific model of the car</td></tr>
-            <tr><th>Prod. year</th><td>The year the car was manufactured</td></tr>
-            <tr><th>Category</th><td>The type or class of the car</td></tr>
-            <tr><th>Leather interior</th><td>Indicates whether the car has a leather interior</td></tr>
-            <tr><th>Fuel type</th><td>The type of fuel the car uses</td></tr>
-            <tr><th>Engine volume</th><td>The volume of the car’s engine</td></tr>
-            <tr><th>Mileage</th><td>The distance the car has traveled</td></tr>
-            <tr><th>Gear box type</th><td>The type of transmission the car has</td></tr>
+            <tr><th>Manufacturer</th><td>The brand or manufacturer of the vehicle</td></tr>
+            <tr><th>Model</th><td>The specific model of the vehicle</td></tr>
+            <tr><th>Prod. year</th><td>The year the vehicle was manufactured</td></tr>
+            <tr><th>Category</th><td>The type or class of the vehicle</td></tr>
+            <tr><th>Leather interior</th><td>Indicates whether the vehicle has a leather interior</td></tr>
+            <tr><th>Fuel type</th><td>The type of fuel the vehicle uses</td></tr>
+            <tr><th>Engine volume</th><td>The volume of the vehicle’s engine</td></tr>
+            <tr><th>Mileage</th><td>The distance the vehicle has traveled</td></tr>
+            <tr><th>Gear box type</th><td>The type of transmission the vehicle has</td></tr>
             <tr><th>Drive wheels</th><td>Which wheels are driven by the engine</td></tr>
+            <tr><th>Doors</th><td>The no of doors the vehicle has</td></tr>
             <tr><th>Wheel</th><td>The type or configuration of the wheels</td></tr>
-            <tr><th>Color</th><td>The color of the car</td></tr>
-            <tr><th>Airbags</th><td>The number of airbags in the car</td></tr>
-            <tr><th>Cylinders</th><td>The number of cylinders in the car’s engine</td></tr>
+            <tr><th>Color</th><td>The color of the vehicle</td></tr>
+            <tr><th>Airbags</th><td>The number of airbags in the vehicle</td></tr>
+            <tr><th>Cylinders</th><td>The number of cylinders in the vehicle’s engine</td></tr>
             </table><br>""", unsafe_allow_html=True)
 
     st.divider()
-    st.write('Please enter the car details in the sidebar and click the button below to predict the price.')
+    st.write('Please enter the vehicle details in the sidebar and click the button below to predict the price.')
 
     # Sidebar for user inputs
-    st.sidebar.header("Insert Car Information")
+    st.sidebar.header("Insert Vehicle Information")
 
     def user_input_features():
         # Manufacturer Field - Read-only Text Field with "Hyundai"
