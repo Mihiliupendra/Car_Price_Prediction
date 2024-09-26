@@ -87,7 +87,6 @@ def main():
             <tr><th>Mileage</th><td>The distance the car has traveled</td></tr>
             <tr><th>Gear box type</th><td>The type of transmission the car has</td></tr>
             <tr><th>Drive wheels</th><td>Which wheels are driven by the engine</td></tr>
-            <tr><th>Doors</th><td>The number of doors the car has</td></tr>
             <tr><th>Wheel</th><td>The type or configuration of the wheels</td></tr>
             <tr><th>Color</th><td>The color of the car</td></tr>
             <tr><th>Airbags</th><td>The number of airbags in the car</td></tr>
@@ -117,7 +116,7 @@ def main():
         mileage = st.sidebar.number_input('Mileage (Km)', 0, None, 50000, step=1000)
         cylinders = st.sidebar.number_input('Number of Cylinders', 1, 16, 4)
         gearbox_type = st.sidebar.selectbox('Gearbox Type', ('Manual', 'Automatic','Triptronic','Variator'))
-        drive_wheels = st.sidebar.selectbox('Drive Wheels', ('Front', 'Rear', '4*4'))
+        drive_wheels = st.sidebar.selectbox('Drive Wheels', ('Front', 'Rear', '4X4'))
         doors = st.sidebar.number_input('Number of Doors', 2, 5, 4)
         wheel_type = st.sidebar.selectbox('Wheel Type', ('Left Wheel', 'Right Wheel'))
         color = st.sidebar.selectbox('Color',('Beige', 'Black', 'Blue', 'Brown', 'Carnelian Red', 'Golden', 'Green',
