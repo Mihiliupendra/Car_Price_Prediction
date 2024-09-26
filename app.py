@@ -70,7 +70,7 @@ def predict_car_price(data):
 
 # Streamlit App
 def main():
-    st.header("Car Price Prediction App",divider='rainbow')
+    st.header("Vehicle Price Prediction App",divider='rainbow')
     st.subheader("This app predicts the vehicle price based on its specifications.")
     st.divider()
 
