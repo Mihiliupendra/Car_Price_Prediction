@@ -52,7 +52,7 @@ def predict_car_price(data):
     data['Leather interior'] = data['Leather interior'].map({'No': 0, 'Yes': 1})
     data['Fuel type'] = data['Fuel type'].map({'CNG': 0, 'Diesel': 1, 'Hybrid': 2, 'Hydrogen': 3, 'LPG': 4, 'Petrol': 5})
     data['Gear box type'] = data['Gear box type'].map({'Manual': 0, 'Automatic': 1,'Triptronic':2,'Variator':3})
-    data['Drive wheels'] = data['Drive wheels'].map({'Front': 0, 'Rear': 1, '4x4': 2})
+    data['Drive wheels'] = data['Drive wheels'].map({'Front': 0, 'Rear': 1})
     data['Color']=data['Color'].map({'Beige': 0,'Black': 1,'Blue': 2,'Brown': 3,'Carnelian Red': 4,'Golden': 5,'Green': 6,'Grey': 7,
                                      'Orange': 8,'Purple': 9,'Red': 10,'Silver': 11,'Sky Blue': 12,'White': 13,'Yellow': 14})
 
@@ -119,7 +119,7 @@ def main():
         engine_volume = st.sidebar.number_input('Engine Volume (L)', 0.0, 10.0, 1.8, step=0.1)
         cylinders = st.sidebar.number_input('Number of Cylinders', 1, 16, 4)
         gearbox_type = st.sidebar.selectbox('Gearbox Type', ('Manual', 'Automatic','Triptronic','Variator'))
-        drive_wheels = st.sidebar.selectbox('Drive Wheels', ('Front', 'Rear', '4X4'))
+        drive_wheels = st.sidebar.selectbox('Drive Wheels', ('Front', 'Rear'))
         wheel_type = st.sidebar.selectbox('Wheel Type', ('Left Wheel', 'Right Wheel'))
         color = st.sidebar.selectbox('Color',('Beige', 'Black', 'Blue', 'Brown', 'Carnelian Red', 'Golden', 'Green',
                                                'Grey','Orange', 'Purple', 'Red', 'Silver', 'Sky Blue', 'White', 'Yellow'))
